@@ -1,74 +1,53 @@
-"use client";
+import Link from "next/link";
 
-import { useState } from "react";
-import GraphPlotter from "./GraphhPlotter";
-
-export default function Home() {
-  const [formula, setFormula] = useState("a * sin(b * x)");
-  const [a, setA] = useState(1);
-  const [b, setB] = useState(1);
-  const [graphs, setGraphs] = useState<
-    { formula: string; params: { a: number; b: number }; color: string }[]
-  >([]);
-
-  const randomColor = () =>
-    "#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6, "0");
-
-  const addGraph = () => {
-    setGraphs([...graphs, { formula, params: { a, b }, color: randomColor() }]);
-  };
-
+export default function HomePage() {
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Mini GeoGebra w Next.js</h1>
+    <main className="max-w-4xl mx-auto py-16 px-6">
+      <h1 className="text-4xl font-bold mb-4">
+        Interaktywne centrum obliczeń grawitacyjnych
+      </h1>
 
-      <div style={{ marginBottom: 20 }}>
-        <input
-          value={formula}
-          onChange={(e) => setFormula(e.target.value)}
-          style={{ padding: 8, width: 300 }}
-        />
-        <button onClick={addGraph} style={{ marginLeft: 10 }}>
-          Dodaj wykres
-        </button>
-      </div>
+      <p className="text-gray-400 mb-10 max-w-2xl">
+        Obliczaj i wizualizuj zjawiska grawitacyjne: siłę przyciągania,
+        przyspieszenie grawitacyjne, prawa Keplera, prędkości kosmiczne i wiele
+        więcej.
+      </p>
 
-      <div style={{ marginBottom: 20 }}>
-        <label>
-          a = {a}
-          <input
-            type="range"
-            min="-5"
-            max="5"
-            step="0.1"
-            value={a}
-            onChange={(e) => setA(parseFloat(e.target.value))}
-          />
-        </label>
-        <br />
-        <label>
-          b = {b}
-          <input
-            type="range"
-            min="-5"
-            max="5"
-            step="0.1"
-            value={b}
-            onChange={(e) => setB(parseFloat(e.target.value))}
-          />
-        </label>
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Link
+          href="/gravitationalForce"
+          className="p-6 rounded-xl border border-gray-700 bg-gray-900 hover:bg-gray-800 transition"
+        >
+          <h2 className="text-xl font-semibold mb-2">Siła grawitacji</h2>
+          <p className="text-gray-400">
+            Oblicz siłę przyciągania między dwoma masami i zobacz, jak zmienia
+            się wraz z odległością.
+          </p>
+        </Link>
 
-      <div>
-        {graphs.map((g, i) => (
-          <GraphPlotter
-            key={i}
-            formula={g.formula}
-            params={g.params}
-            color={g.color}
-          />
-        ))}
+        <Link
+          href="/gravitacionalAcceleration"
+          className="p-6 rounded-xl border border-gray-700 bg-gray-900 hover:bg-gray-800 transition"
+        >
+          <h2 className="text-xl font-semibold mb-2">
+            Przyspieszenie grawitacyjne
+          </h2>
+          <p className="text-gray-400">
+            Oblicz przyspieszenie grawitacyjne między dwoma masami i zobacz, jak
+            zmienia się wraz z odległością.
+          </p>
+        </Link>
+
+        <div className="p-6 rounded-xl border border-gray-700 bg-gray-900 opacity-50">
+          <h2 className="text-xl font-semibold mb-2">Prawa Keplera</h2>
+          <p className="text-gray-400">W przygotowaniu</p>
+        </div>
+
+        <div className="p-6 rounded-xl border border-gray-700 bg-gray-900 opacity-50">
+          <h2 className="text-xl font-semibold mb-2">Prędkości kosmiczne</h2>
+          <p className="text-gray-400">W przygotowaniu</p>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }
