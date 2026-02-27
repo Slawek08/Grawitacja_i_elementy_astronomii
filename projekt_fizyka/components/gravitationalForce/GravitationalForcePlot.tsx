@@ -23,7 +23,7 @@ export default function GravityPlot({ m1, m2 }: Props) {
     const forces = [];
 
     for (let r = 1e6; r <= 2e7; r += 5e5) {
-      distances.push(r / 1000); // km
+      distances.push(r); 
       forces.push((G * m1 * m2) / (r * r));
     }
 
@@ -44,8 +44,8 @@ export default function GravityPlot({ m1, m2 }: Props) {
       options: {
         responsive: true,
         scales: {
-          y: { beginAtZero: false },
-          x: { title: { display: true, text: "Odległość (km)" } },
+          y: { beginAtZero: false, title: {display: true, text: "Siła grawitacji (N)"} },
+          x: { title: { display: true, text: "Odległość (m)" } },
         },
       },
     });

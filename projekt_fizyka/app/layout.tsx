@@ -2,7 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
-  title: "Grawitacja – centrum obliczeń",
+  title: "Grawitacja i elementy astrnomii",
   description: "Interaktywne narzędzia do obliczeń grawitacyjnych",
 };
 

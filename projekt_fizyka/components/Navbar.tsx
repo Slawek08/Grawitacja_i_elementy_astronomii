@@ -15,15 +15,24 @@ export default function Navbar() {
           >
             Siła grawitacji
           </Link>
-
           <Link
             href="/gravitacionalAcceleration"
             className="hover:text-blue-400 transition"
           >
             Przyspieszenie grawitacyjne
           </Link>
-          <span className="opacity-50">Przyspieszenie grawitacyjne</span>
-          <span className="opacity-50">Prawa Keplera</span>
+          <Link
+            href="/keplerLawsOfPlanetaryMotion"
+            className="hover:text-blue-400 transition"
+          >
+            Prawa Keplera
+          </Link>
+          <Link
+            href="/forcesCausingOrbitalMotion"
+            className="hover:text-blue-400 transition"
+          >
+            Siły wywołujące ruch orbitalny
+          </Link>
         </div>
       </div>
     </nav>

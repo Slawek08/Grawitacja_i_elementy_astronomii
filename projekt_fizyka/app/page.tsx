@@ -1,8 +1,10 @@
 import Link from "next/link";
+import SpaceBackgroundThreeJs from "@/components/BackgroundThreeJs";
 
 export default function HomePage() {
   return (
     <main className="max-w-4xl mx-auto py-16 px-6">
+      <SpaceBackgroundThreeJs/>
       <h1 className="text-4xl font-bold mb-4">
         Interaktywne centrum obliczeń grawitacyjnych
       </h1>
@@ -33,18 +35,24 @@ export default function HomePage() {
             Przyspieszenie grawitacyjne
           </h2>
           <p className="text-gray-400">
-            Oblicz przyspieszenie grawitacyjne między dwoma masami i zobacz, jak
-            zmienia się wraz z odległością.
+            Oblicz przyspieszenie grawitacyjne.
+          </p>
+        </Link>
+
+        <Link
+          href="/keplerLawsOfPlanetaryMotion"
+          className="p-6 rounded-xl border border-gray-700 bg-gray-900 hover:bg-gray-800 transition"
+        >
+          <h2 className="text-xl font-semibold mb-2">
+            Prawa Keplera
+          </h2>
+          <p className="text-gray-400">
+            Zobacz eksperymenty z użyciem praw Keplera
           </p>
         </Link>
 
         <div className="p-6 rounded-xl border border-gray-700 bg-gray-900 opacity-50">
-          <h2 className="text-xl font-semibold mb-2">Prawa Keplera</h2>
-          <p className="text-gray-400">W przygotowaniu</p>
-        </div>
-
-        <div className="p-6 rounded-xl border border-gray-700 bg-gray-900 opacity-50">
-          <h2 className="text-xl font-semibold mb-2">Prędkości kosmiczne</h2>
+          <h2 className="text-xl font-semibold mb-2">Siły wywołujące ruch orbitalny</h2>
           <p className="text-gray-400">W przygotowaniu</p>
         </div>
       </div>
