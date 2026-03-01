@@ -7,7 +7,7 @@ const G = 6.674e-11;
 export default function FirstCosmicVelocityCalculator() {
   const [M, setM] = useState(5.972e24);
   const [R, setR] = useState(6.371e6);
-  const [velocity, setVelocity] = useState<number | null>(null);
+  const [velocity, setVelocity] = useState<number>(0);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
