@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="w-full border-b border-gray-800 bg-gray-900/60 backdrop-blur-md">
       <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link href="/" className="text-xl font-bold text-blue-300">
+        <Link href="/" className="text-xl px-10 font-bold text-blue-300">
           Grawitacja
         </Link>
 
@@ -32,6 +32,13 @@ export default function Navbar() {
             className="hover:text-blue-400 transition"
           >
             Siły wywołujące ruch orbitalny
+          </Link>
+
+          <Link
+            href="/gravitationalPotentialEnergy"
+            className="hover:text-blue-400 transition"
+          >
+            Energia potencjalna grawitacji
           </Link>
         </div>
       </div>

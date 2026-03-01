@@ -20,7 +20,7 @@ export default function HomePage() {
             <h2 className="text-xl font-semibold mb-2">
               Pierwsza prędkość kosmiczna
             </h2>
-            <p className="text-gray-400">in progress</p>
+            <p className="text-gray-400">Oblicz pierwszą prędkość kosmiczną</p>
           </Link>
 
           <Link
@@ -29,7 +29,7 @@ export default function HomePage() {
           >
             <h2 className="text-xl font-semibold mb-2">Druga prędkość kosmiczna</h2>
             <p className="text-gray-400">
-             in progress
+             Oblicz drugą prędkość kosmiczną
             </p>
           </Link>
         </div>
