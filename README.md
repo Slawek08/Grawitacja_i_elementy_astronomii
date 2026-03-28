@@ -14,7 +14,7 @@ This project was created for the phisics class.
 ## Link to the webside: 
 * https://grawitacja-i-elementy-astronomii.vercel.app/
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
